@@ -14,7 +14,9 @@
     <color name="white">#FFFFFF</color>
     <color name="background_card">#2a434a</color>
     <color name="hui_999999">#999999</color>
-
+    <color name="text_button">#00a0ea</color>
+    <color name="div_other">#e1e1e1</color>
+    <color name="text_button_pressed">#0093d8</color>
     <integer-array name="refresh_progress_bar_colors">
         <item>@color/progress_bar_color</item>
         <!--<item>@color/blue</item>-->
