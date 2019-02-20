@@ -22,8 +22,8 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
     @Override
     protected void initRecyclerView() {
         super.initRecyclerView();
-        //addHeaderView();
-        //addFooterView();
+        addHeaderView();
+        addFooterView();
         mEmptyView = getLayoutInflater().inflate(R.layout.recycler_empty_view, null);
         mWrapperRecyclerView.setEmptyView(mEmptyView);
 
