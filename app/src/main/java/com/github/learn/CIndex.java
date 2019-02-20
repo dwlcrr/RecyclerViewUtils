@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.github.captain_miao.recyclerviewutils.LoadingLayout;
+import com.github.captain_miao.recyclerviewutils.SimpleLoadingLayout;
 import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
 import com.github.learn.app.AppConstants;
 import com.github.learn.base.BaseRecyclerActivity;
@@ -41,6 +43,8 @@ public class CIndex extends BaseRecyclerActivity<String> {
     @Override
     protected void initRecyclerView() {
         super.initRecyclerView();
+        SimpleLoadingLayout simpleload = findViewById(R.id.simpleload);
+        simpleload.setViewState(LoadingLayout.VIEW_STATE_CONTENT);
         ArrayList<String> items = new ArrayList<>();
         initList();
         for (Map.Entry<String, Class> entry : data.entrySet()) {
@@ -52,7 +56,6 @@ public class CIndex extends BaseRecyclerActivity<String> {
     }
 
 
-
     @Override
     protected int getLayoutResID() {
         return R.layout.ac_refresh_recycler_view;
@@ -61,8 +64,7 @@ public class CIndex extends BaseRecyclerActivity<String> {
 
     @Override
     protected WrapperRecyclerView getRecyclerView() {
-        return mWrapperRecyclerView != null ? mWrapperRecyclerView
-                : (mWrapperRecyclerView = (WrapperRecyclerView) findViewById(R.id.recycler_view));
+        return mWrapperRecyclerView != null ? mWrapperRecyclerView : (mWrapperRecyclerView = findViewById(R.id.recycler_view));
     }
 
 

@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.github.captain_miao.recyclerviewutils.LoadingLayout;
+import com.github.captain_miao.recyclerviewutils.SimpleLoadingLayout;
 import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
 import com.github.learn.base.BaseRecyclerActivity;
 import com.github.learn.refreshandload.adapter.SimpleAdapter;
@@ -24,15 +26,17 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
         super.initRecyclerView();
         addHeaderView();
         addFooterView();
-        mEmptyView = getLayoutInflater().inflate(R.layout.recycler_empty_view, null);
-        mWrapperRecyclerView.setEmptyView(mEmptyView);
-
-        mEmptyView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(RefreshRecyclerActivity.this, "onClick EmptyView", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        mEmptyView = getLayoutInflater().inflate(R.layout.recycler_empty_view, null);
+//        mWrapperRecyclerView.setEmptyView(mEmptyView);
+//
+//        mEmptyView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(RefreshRecyclerActivity.this, "onClick EmptyView", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+        SimpleLoadingLayout simpleload = findViewById(R.id.simpleload);
+        simpleload.setViewState(LoadingLayout.VIEW_STATE_CONTENT);
     }
 
 
@@ -43,8 +47,7 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
 
     @Override
     protected WrapperRecyclerView getRecyclerView() {
-        return mWrapperRecyclerView != null ? mWrapperRecyclerView
-                : (mWrapperRecyclerView = (WrapperRecyclerView) findViewById(R.id.recycler_view));
+        return mWrapperRecyclerView != null ? mWrapperRecyclerView : (mWrapperRecyclerView = findViewById(R.id.recycler_view));
     }
 
     @Override
@@ -52,10 +55,15 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
         return  mAdapter != null ? mAdapter : ( mAdapter = new SimpleAdapter(new ArrayList<String>()));
     }
 
-    @Override
-    public boolean enablePullToLoadMore() {
-        return false;
-    }
+//    @Override
+//    public boolean enablePullToLoadMore() {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean enablePullToRefresh() {
+//        return false;
+//    }
 
     @Override
     protected void loadData() {

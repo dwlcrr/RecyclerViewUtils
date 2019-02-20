@@ -4,8 +4,6 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:textColor="#999999"
-        android:textSize="15sp"
         android:id="@+id/errorLoadingText"
         android:drawablePadding="5dp"
         android:layout_width="match_parent"
@@ -13,6 +11,8 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:lineSpacingExtra="5dp"
-        android:text="@string/network_error_text" />
+        android:text="@string/network_error_text"
+        android:textColor="#999999"
+        android:textSize="15sp"/>
 
 </LinearLayout>
