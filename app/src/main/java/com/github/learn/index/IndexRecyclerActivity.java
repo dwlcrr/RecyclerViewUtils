@@ -7,12 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.github.captain_miao.recyclerviewutils.common.DividerItemDecoration;
-import com.github.captain_miao.recyclerviewutils.common.EasySidebar;
 import com.github.learn.refreshandload.R;
 import com.github.learn.stickyheaders.DetectionVo;
 import com.github.learn.stickyheaders.VehicleDetectionAdapter;
-import com.timehop.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
+import com.smm.lib.recycleview.recyclerviewutils.common.DividerItemDecoration;
+import com.smm.lib.recycleview.recyclerviewutils.common.EasySidebar;
+import com.smm.lib.recycleview.stickyheadersrecyclerview.StickyRecyclerHeadersDecoration;
 
 import java.util.ArrayList;
 import java.util.HashMap;

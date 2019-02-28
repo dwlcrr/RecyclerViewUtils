@@ -7,10 +7,10 @@ android {
 
     defaultConfig {
         applicationId "com.github.learn.recyclerviewutils"
-        minSdkVersion project.MIN_SDK_VERSION
-        targetSdkVersion project.TARGET_SDK_VERSION
-        versionCode project.VersionCode  as int
-        versionName project.VersionName
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "0.1"
         archivesBaseName = "recyclerviewutils-$versionName"
         //enforceUniquePackageName=false
 

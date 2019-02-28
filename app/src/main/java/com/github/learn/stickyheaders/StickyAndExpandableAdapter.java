@@ -7,11 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.github.captain_miao.recyclerviewutils.common.ClickableViewHolder;
-import com.github.captain_miao.recyclerviewutils.listener.OnRecyclerItemClickListener;
-import com.github.captain_miao.recyclerviewutils.stickyandexpandable.StickyAndExpandableRecyclerHeadersAdapter;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.recyclerviewutils.common.ClickableViewHolder;
+import com.smm.lib.recycleview.recyclerviewutils.listener.OnRecyclerItemClickListener;
+import com.smm.lib.recycleview.recyclerviewutils.stickyandexpandable.StickyAndExpandableRecyclerHeadersAdapter;
 
 
 /**

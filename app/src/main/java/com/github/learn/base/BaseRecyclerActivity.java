@@ -3,12 +3,12 @@ package com.github.learn.base;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
-import com.github.captain_miao.recyclerviewutils.common.DefaultLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.common.LayoutManagers;
-import com.github.captain_miao.recyclerviewutils.listener.RefreshRecyclerViewListener;
+import com.github.learn.refreshandload.adapter.SimpleAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
+import com.smm.lib.recycleview.recyclerviewutils.common.DefaultLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.common.LayoutManagers;
+import com.smm.lib.recycleview.recyclerviewutils.listener.RefreshRecyclerViewListener;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     private static String TAG = BaseRecyclerActivity.class.getSimpleName();
 
     protected WrapperRecyclerView mWrapperRecyclerView;
-    protected BaseWrapperRecyclerAdapter<T, ? extends RecyclerView.ViewHolder> mAdapter;
+    protected SimpleAdapter mAdapter;
 
     protected boolean mIsRefresh = false;
     protected int      mCurrPage = 1;
@@ -24,7 +24,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     //Recycler 绑定 Adapter
     protected abstract int getLayoutResID();
     protected abstract WrapperRecyclerView getRecyclerView();
-    protected abstract BaseWrapperRecyclerAdapter<T, ? extends RecyclerView.ViewHolder> getWrapperRecyclerAdapter();
+    protected abstract BaseWrapperRecyclerAdapter<String, ? extends RecyclerView.ViewHolder> getWrapperRecyclerAdapter();
 
     //加载数据 getCurrPage() 拿到当前页数
     protected abstract void loadData();
@@ -41,7 +41,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     protected void initRecyclerView() {
         checkParent();
         mWrapperRecyclerView = getRecyclerView();
-        mAdapter = getWrapperRecyclerAdapter();
+        mAdapter = (SimpleAdapter) getWrapperRecyclerAdapter();
         mAdapter.setLoadMoreFooterView(new DefaultLoadMoreFooterView(this));
 
         mWrapperRecyclerView.setLayoutManager(getLayoutManager());
@@ -113,7 +113,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     }
 
     public void addMoreData(List<T> items) {
-        mAdapter.addAll(items, true);
+        mAdapter.addAll((List<String>) items, true);
     }
 
 

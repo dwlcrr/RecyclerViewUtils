@@ -2,14 +2,13 @@ package com.github.learn.refreshandload.gridview;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-
-import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
-import com.github.captain_miao.recyclerviewutils.common.BaseLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.common.LayoutManagers;
-import com.github.captain_miao.recyclerviewutils.listener.RefreshRecyclerViewListener;
 import com.github.learn.base.BaseActivity;
 import com.github.learn.refreshandload.R;
 import com.github.learn.refreshandload.adapter.SimpleAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
+import com.smm.lib.recycleview.recyclerviewutils.common.BaseLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.common.LayoutManagers;
+import com.smm.lib.recycleview.recyclerviewutils.listener.RefreshRecyclerViewListener;
 
 import java.util.ArrayList;
 

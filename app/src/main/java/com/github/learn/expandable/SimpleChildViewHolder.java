@@ -3,9 +3,8 @@ package com.github.learn.expandable;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
-
-import com.bignerdranch.expandablerecyclerview.ViewHolder.ChildViewHolder;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.expandablerecyclerview.ViewHolder.ChildViewHolder;
 
 
 public class SimpleChildViewHolder extends ChildViewHolder {

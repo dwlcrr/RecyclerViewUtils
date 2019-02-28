@@ -10,13 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
-import com.github.captain_miao.recyclerviewutils.common.DefaultLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.common.LayoutManagers;
-import com.github.captain_miao.recyclerviewutils.listener.RefreshRecyclerViewListener;
 import com.github.learn.app.AppConstants;
 import com.github.learn.refreshandload.adapter.SimpleWrapperAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
+import com.smm.lib.recycleview.recyclerviewutils.common.DefaultLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.common.LayoutManagers;
+import com.smm.lib.recycleview.recyclerviewutils.listener.RefreshRecyclerViewListener;
 
 import java.security.SecureRandom;
 import java.util.ArrayList;

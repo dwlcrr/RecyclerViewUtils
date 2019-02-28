@@ -3,11 +3,6 @@ package com.github.learn;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.LoadingLayout;
-import com.github.captain_miao.recyclerviewutils.SimpleLoadingLayout;
-import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
 import com.github.learn.app.AppConstants;
 import com.github.learn.base.BaseRecyclerActivity;
 import com.github.learn.databinding.DataBindingRecyclerActivity;
@@ -22,6 +17,10 @@ import com.github.learn.refreshandload.gridview.GridViewActivity;
 import com.github.learn.refreshandload.gridview.RefreshGridViewActivity;
 import com.github.learn.staggeredgrid.StaggeredGridRecyclerActivity;
 import com.github.learn.stickyheaders.StickyHeadersActivity;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.LoadingLayout;
+import com.smm.lib.recycleview.recyclerviewutils.SimpleLoadingLayout;
+import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

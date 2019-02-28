@@ -6,19 +6,17 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
-
-import com.github.captain_miao.recyclerviewutils.common.BaseLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.common.GridItemSpacingDecoration;
-import com.github.captain_miao.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
 import com.github.learn.refreshandload.R;
 import com.github.learn.refreshandload.adapter.SimpleAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.common.BaseLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.common.GridItemSpacingDecoration;
+import com.smm.lib.recycleview.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.PtrFrameLayout;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.PtrHandler;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.header.MaterialHeader;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.util.PtrLocalDisplay;
 
 import java.util.ArrayList;
-
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
-import in.srain.cube.views.ptr.header.MaterialHeader;
-import in.srain.cube.views.ptr.util.PtrLocalDisplay;
 
 
 public class GridViewActivity extends AppCompatActivity {

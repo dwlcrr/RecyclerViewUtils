@@ -7,10 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.bignerdranch.expandablerecyclerview.Model.ParentListItem;
-import com.bignerdranch.expandablerecyclerview.ViewHolder.ChildViewHolder;
-import com.github.captain_miao.recyclerviewutils.common.DividerItemDecoration;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.expandablerecyclerview.Model.ParentListItem;
+import com.smm.lib.recycleview.expandablerecyclerview.ViewHolder.ChildViewHolder;
+import com.smm.lib.recycleview.recyclerviewutils.common.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,7 +71,7 @@ public class ExpandableRecyclerActivity extends AppCompatActivity {
             childItemList.add(new SimpleChild(simpleParentItem.getTitle() + "# content 1", simpleParentItem.isSolved()));
             childItemList.add(new SimpleChild(simpleParentItem.getTitle() + "# content 2", simpleParentItem.isSolved()));
             simpleParentItem.setChildItemList(childItemList);
-            parentListItems.add(simpleParentItem);
+            parentListItems.add((ParentListItem) simpleParentItem);
         }
         return parentListItems;
     }

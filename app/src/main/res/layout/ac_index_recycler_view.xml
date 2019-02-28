@@ -11,7 +11,7 @@
 
     </android.support.v7.widget.RecyclerView>
 
-    <com.github.captain_miao.recyclerviewutils.common.EasySidebar
+    <com.smm.lib.recycleview.recyclerviewutils.common.EasySidebar
         android:id="@+id/sidebar"
         android:layout_width="30dp"
         android:layout_height="fill_parent"

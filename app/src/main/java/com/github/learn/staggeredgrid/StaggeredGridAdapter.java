@@ -6,13 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.common.ClickableViewHolder;
-import com.github.captain_miao.recyclerviewutils.listener.OnRecyclerItemClickListener;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.common.ClickableViewHolder;
+import com.smm.lib.recycleview.recyclerviewutils.listener.OnRecyclerItemClickListener;
 import com.squareup.picasso.Picasso;
-
 import java.util.List;
 
 /**
@@ -58,7 +56,7 @@ public class StaggeredGridAdapter extends BaseWrapperRecyclerAdapter<String, Rec
     }
 
 
-    public class ItemViewHolder extends ClickableViewHolder{
+    public class ItemViewHolder extends ClickableViewHolder {
         public ImageView mIvImage;
 
         public ItemViewHolder(View view) {

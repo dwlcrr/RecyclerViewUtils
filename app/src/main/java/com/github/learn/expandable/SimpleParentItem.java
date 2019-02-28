@@ -1,7 +1,7 @@
 package com.github.learn.expandable;
 
-import com.bignerdranch.expandablerecyclerview.Model.ParentListItem;
 
+import com.smm.lib.recycleview.expandablerecyclerview.Model.ParentListItem;
 import java.util.List;
 
 public class SimpleParentItem implements ParentListItem {

@@ -4,12 +4,11 @@ import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Toast;
-
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.WrapperRecyclerView;
 import com.github.learn.base.BaseRecyclerActivity;
 import com.github.learn.refreshandload.R;
 import com.github.learn.refreshandload.adapter.SimpleAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;

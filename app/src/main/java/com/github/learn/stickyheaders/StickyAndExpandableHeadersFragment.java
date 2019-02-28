@@ -8,10 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.github.captain_miao.recyclerviewutils.common.BaseLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.recyclerviewutils.common.BaseLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
 
 import java.util.ArrayList;
 import java.util.List;

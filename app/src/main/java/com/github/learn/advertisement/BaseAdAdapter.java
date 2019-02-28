@@ -5,9 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.listener.OnRecyclerItemClickListener;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.listener.OnRecyclerItemClickListener;
 
 import java.util.List;
 

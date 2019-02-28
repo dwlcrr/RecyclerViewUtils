@@ -1,7 +1,6 @@
 package com.github.learn.stickyheaders;
 
-import com.github.captain_miao.recyclerviewutils.stickyandexpandable.StickyHeaderItem;
-
+import com.smm.lib.recycleview.recyclerviewutils.stickyandexpandable.StickyHeaderItem;
 import java.util.ArrayList;
 import java.util.List;
 

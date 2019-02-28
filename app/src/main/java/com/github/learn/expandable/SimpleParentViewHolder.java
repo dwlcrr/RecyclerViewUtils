@@ -5,9 +5,8 @@ import android.os.Build;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import com.bignerdranch.expandablerecyclerview.ViewHolder.ParentViewHolder;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.expandablerecyclerview.ViewHolder.ParentViewHolder;
 
 public class SimpleParentViewHolder extends ParentViewHolder {
     private static final float INITIAL_POSITION = 0.0f;

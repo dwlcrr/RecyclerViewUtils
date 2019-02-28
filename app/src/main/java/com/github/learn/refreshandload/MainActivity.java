@@ -11,9 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
-
-import com.github.captain_miao.recyclerviewutils.common.BaseLoadMoreFooterView;
-import com.github.captain_miao.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
 import com.github.learn.app.AppConstants;
 import com.github.learn.base.BaseActivity;
 import com.github.learn.databinding.DataBindingRecyclerActivity;
@@ -27,14 +24,15 @@ import com.github.learn.stickyheaders.StickyHeadersActivity;
 import com.github.learn.viewpage.GirlViewModel;
 import com.github.learn.viewpage.HeaderViewPageAdapter;
 import com.github.learn.viewpage.ViewPageDotView;
+import com.smm.lib.recycleview.recyclerviewutils.common.BaseLoadMoreFooterView;
+import com.smm.lib.recycleview.recyclerviewutils.listener.LinearLayoutWithRecyclerOnScrollListener;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.PtrFrameLayout;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.PtrHandler;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.header.MaterialHeader;
+import com.smm.lib.recycleview.recyclerviewutils.ptr.util.PtrLocalDisplay;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
-import in.srain.cube.views.ptr.header.MaterialHeader;
-import in.srain.cube.views.ptr.util.PtrLocalDisplay;
 
 
 public class MainActivity extends BaseActivity implements ViewPager.OnPageChangeListener, PtrFrameLayout.HorizontalMoveArea {

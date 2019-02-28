@@ -8,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.captain_miao.recyclerviewutils.BaseWrapperRecyclerAdapter;
-import com.github.captain_miao.recyclerviewutils.common.ClickableViewHolder;
-import com.github.captain_miao.recyclerviewutils.listener.OnRecyclerItemClickListener;
 import com.github.learn.refreshandload.R;
+import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
+import com.smm.lib.recycleview.recyclerviewutils.common.ClickableViewHolder;
+import com.smm.lib.recycleview.recyclerviewutils.listener.OnRecyclerItemClickListener;
 
 import java.security.SecureRandom;
 import java.util.List;
@@ -68,7 +68,7 @@ public class SimpleAdapter extends BaseWrapperRecyclerAdapter<String, SimpleAdap
     }
 
 
-    public class ItemViewHolder extends ClickableViewHolder{
+    public class ItemViewHolder extends ClickableViewHolder {
         public TextView mTvContent;
 
         public ItemViewHolder(View view) {
