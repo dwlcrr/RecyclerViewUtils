@@ -3,20 +3,18 @@ package com.github.learn.base;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import com.github.learn.refreshandload.adapter.SimpleAdapter;
 import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
 import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
 import com.smm.lib.recycleview.recyclerviewutils.common.DefaultLoadMoreFooterView;
 import com.smm.lib.recycleview.recyclerviewutils.common.LayoutManagers;
 import com.smm.lib.recycleview.recyclerviewutils.listener.RefreshRecyclerViewListener;
-
 import java.util.List;
 
 public abstract class BaseRecyclerActivity<T> extends BaseActivity implements RefreshRecyclerViewListener {
     private static String TAG = BaseRecyclerActivity.class.getSimpleName();
 
     protected WrapperRecyclerView mWrapperRecyclerView;
-    protected SimpleAdapter mAdapter;
+    protected BaseWrapperRecyclerAdapter mAdapter;
 
     protected boolean mIsRefresh = false;
     protected int      mCurrPage = 1;
@@ -41,7 +39,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     protected void initRecyclerView() {
         checkParent();
         mWrapperRecyclerView = getRecyclerView();
-        mAdapter = (SimpleAdapter) getWrapperRecyclerAdapter();
+        mAdapter = getWrapperRecyclerAdapter();
         mAdapter.setLoadMoreFooterView(new DefaultLoadMoreFooterView(this));
 
         mWrapperRecyclerView.setLayoutManager(getLayoutManager());
@@ -113,7 +111,7 @@ public abstract class BaseRecyclerActivity<T> extends BaseActivity implements Re
     }
 
     public void addMoreData(List<T> items) {
-        mAdapter.addAll((List<String>) items, true);
+        mAdapter.addAll(items, true);
     }
 
 

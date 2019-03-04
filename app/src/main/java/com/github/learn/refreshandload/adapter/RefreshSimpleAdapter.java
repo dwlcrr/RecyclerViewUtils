@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.github.learn.base.RefreshMode;
 import com.github.learn.refreshandload.R;
 import com.smm.lib.recycleview.recyclerviewutils.BaseWrapperRecyclerAdapter;
 import com.smm.lib.recycleview.recyclerviewutils.common.ClickableViewHolder;
@@ -18,32 +19,32 @@ import java.util.List;
  * @author YanLu
  * @since 15/9/15
  */
-public class SimpleAdapter extends BaseWrapperRecyclerAdapter<String, SimpleAdapter.ItemViewHolder> implements OnRecyclerItemClickListener {
+public class RefreshSimpleAdapter extends BaseWrapperRecyclerAdapter<RefreshMode, RefreshSimpleAdapter.ItemViewHolder> implements OnRecyclerItemClickListener {
 
-    public SimpleAdapter(List<String> items) {
+    public RefreshSimpleAdapter(List<RefreshMode> items) {
         appendToList(items);
     }
 
 
     @Override
-    public SimpleAdapter.ItemViewHolder onCreateItemViewHolder(ViewGroup parent, int viewType) {
+    public ItemViewHolder onCreateItemViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
 
-        return new SimpleAdapter.ItemViewHolder(view);
+        return new RefreshSimpleAdapter.ItemViewHolder(view);
     }
 
     @Override
-    public void onBindItemViewHolder(SimpleAdapter.ItemViewHolder vh, int position) {
-        vh.mTvContent.setText(getItem(position));
+    public void onBindItemViewHolder(ItemViewHolder holder, int position) {
+
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder vh, int position, List payloads) {
-        if(payloads != null && payloads.size() > 0 && vh instanceof SimpleAdapter.ItemViewHolder){
+        if(payloads != null && payloads.size() > 0 && vh instanceof RefreshSimpleAdapter.ItemViewHolder){
             for(Object o : payloads){
                 if(o != null && o instanceof Integer) {
-                    ((SimpleAdapter.ItemViewHolder) vh).mTvContent.setTextColor((Integer) o);
+                    ((RefreshSimpleAdapter.ItemViewHolder) vh).mTvContent.setTextColor((Integer) o);
                 }
             }
         } else {
@@ -71,7 +72,8 @@ public class SimpleAdapter extends BaseWrapperRecyclerAdapter<String, SimpleAdap
         public ItemViewHolder(View view) {
             super(view);
             mTvContent = (TextView) view.findViewById(R.id.tv_content);
-            setOnRecyclerItemClickListener(SimpleAdapter.this);
+            setOnRecyclerItemClickListener(RefreshSimpleAdapter.this);
+            addOnItemViewClickListener();
             addOnViewClickListener(mTvContent);
         }
     }

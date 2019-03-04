@@ -1,5 +1,6 @@
 package com.github.learn.refreshandload;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -62,6 +63,7 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
 //        return false;
 //    }
 
+    @SuppressLint("StaticFieldLeak")
     @Override
     protected void loadData() {
         new AsyncTask<Boolean, Boolean, List<String>>() {
@@ -85,7 +87,7 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
             }
 
             @Override
-            protected void onPostExecute(List<String> items) {
+            protected void onPostExecute(List items) {
                 if(items != null && items.size() > 0) {
                     // 加载完数据 页数+1
                     mCurrPage++;

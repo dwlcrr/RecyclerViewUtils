@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import com.github.learn.app.AppConstants;
+import com.github.learn.base.BaseMode;
 import com.github.learn.base.BaseRecyclerActivity;
 import com.github.learn.databinding.DataBindingRecyclerActivity;
 import com.github.learn.expandable.ExpandableRecyclerActivity;
@@ -12,6 +13,7 @@ import com.github.learn.refreshandload.HeaderRecyclerActivity;
 import com.github.learn.refreshandload.MainActivity;
 import com.github.learn.refreshandload.R;
 import com.github.learn.refreshandload.RefreshRecyclerActivity;
+import com.github.learn.refreshandload.adapter.RefreshSimpleAdapter;
 import com.github.learn.refreshandload.adapter.SimpleAdapter;
 import com.github.learn.refreshandload.gridview.GridViewActivity;
 import com.github.learn.refreshandload.gridview.RefreshGridViewActivity;
@@ -54,18 +56,15 @@ public class CIndex extends BaseRecyclerActivity<String> {
         mAdapter.addAll(items);
     }
 
-
     @Override
     protected int getLayoutResID() {
         return R.layout.ac_refresh_recycler_view;
     }
 
-
     @Override
     protected WrapperRecyclerView getRecyclerView() {
         return mWrapperRecyclerView != null ? mWrapperRecyclerView : (mWrapperRecyclerView = findViewById(R.id.recycler_view));
     }
-
 
     @Override
     protected BaseWrapperRecyclerAdapter<String, ? extends RecyclerView.ViewHolder> getWrapperRecyclerAdapter() {
@@ -86,7 +85,6 @@ public class CIndex extends BaseRecyclerActivity<String> {
         return false;
     }
 
-
     @Override
     public boolean enablePullToRefresh() {
         return false;
@@ -96,7 +94,6 @@ public class CIndex extends BaseRecyclerActivity<String> {
     protected void loadData() {
 
     }
-
 
     public void initList() {
         data.put(getString(R.string.label_action_label_view_page_banner), MainActivity.class);
