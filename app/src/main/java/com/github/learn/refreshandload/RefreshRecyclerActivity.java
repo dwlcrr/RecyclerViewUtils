@@ -19,6 +19,7 @@ public class RefreshRecyclerActivity extends BaseRecyclerActivity<String> {
     private static final String TAG = "AdRecyclerActivity";
     //加载状态文件
     private View mEmptyView;
+
     @Override
     protected void initRecyclerView() {
         super.initRecyclerView();
