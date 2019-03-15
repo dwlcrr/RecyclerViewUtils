@@ -23,6 +23,7 @@ import com.smm.lib.recycleview.recyclerviewutils.SimpleLoadingLayout;
 import com.smm.lib.recycleview.recyclerviewutils.WrapperRecyclerView;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -43,7 +44,7 @@ public class CIndex extends BaseRecyclerActivity<String> {
         super.initRecyclerView();
         SimpleLoadingLayout simpleload = findViewById(R.id.simpleload);
         simpleload.setViewState(LoadingLayout.VIEW_STATE_CONTENT);
-        ArrayList<String> items = new ArrayList<>();
+        List<String> items = new ArrayList<>();
         initList();
         for (Map.Entry<String, Class> entry : data.entrySet()) {
             String key = entry.getKey();

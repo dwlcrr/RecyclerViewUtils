@@ -97,5 +97,9 @@ public class ViewPageHeaderActivity extends AppCompatActivity implements ViewPag
             add(new GirlViewModel(getResources().getColor(R.color.guide_bg_color_3), getString(R.string.guide_title_3),
                     getString(R.string.guide_description_3), "http://ww4.sinaimg.cn/small/610dc034jw1f3litmfts1j20qo0hsac7.jpg"));
         }};
+//        List list = new ArrayList<GirlViewModel>();
+//        list.add( new GirlViewModel(getResources().getColor(R.color.guide_bg_color_1), getString(R.string.guide_title_1),
+//                        getString(R.string.guide_description_1), "http://ww2.sinaimg.cn/small/610dc034jw1f3q5semm0wj20qo0hsacv.jpg"));
+//        return list;
     }
 }
